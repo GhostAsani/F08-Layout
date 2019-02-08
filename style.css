@@ -1,0 +1,51 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto auto;
+  grid-template-areas:
+    "h h"
+    "s a"
+    "f f";
+  grid-gap: 3px;
+}
+
+body {
+  background-color: grey;
+}
+
+header {
+  background-color: red;
+  grid-area: h ;
+}
+
+section {
+  background-color: yellow;
+  grid-area: s ;
+}
+
+aside {
+  background-color: green;
+  grid-area: a ;
+}
+
+footer {
+  background-color: white;
+  grid-area: f ;
+}
+
+@media screen and (max-width: 800px) {
+  body{
+  grid-template-areas: "h h" "s s" "a a" "f f";
+  }
+}
+
+img#sea {
+  max-width: 100%;
+}
+
+img#html {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
